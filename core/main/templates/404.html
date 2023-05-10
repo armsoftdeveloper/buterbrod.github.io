@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Error 404</title>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+        <style>
+            #main{
+                display: table;
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+                font-family: 'Bruno Ace SC', cursive;
+              }
+              .fof{
+                display: table-cell;
+                vertical-align: middle;
+              }
+              
+              .fof h1{
+                font-size: 50px;
+                display: inline-block;
+                padding-right: 12px;
+                animation: type .5s alternate infinite;
+              }
+              
+              @keyframes type{
+                from{box-shadow: inset -3px 0px 0px #888;}
+                to{box-shadow: inset -3px 0px 0px transparent;}
+              }
+        </style>
+    </head>
+<body>
+    <div id="main">
+    	<div class="fof">
+        	<h1> 404 Error </h1>
+    	</div>
+</div>
+</body>
+</html>

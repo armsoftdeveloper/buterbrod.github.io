@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-30 02:30+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Գլխավոր"
+msgstr "Գլխավոր"
+
+msgid "Մենյու"
+msgstr "Մենյու"
+
+msgid "Մեր Մասին"
+msgstr "Մեր Մասին"
+
+msgid "Կապ Մեզ Հետ"
+msgstr "Կապ Մեզ Հետ"
+
+msgid "Աշխատանքային Ժամեր"
+msgstr "Աշխատանքային Ժամեր"
+
+msgid "Ընդհանուր դրույթներր եւ պայմանները"
+msgstr "Ընդհանուր դրույթներր եւ պայմանները"
+
+msgid "Բոլոր իրավունքները պաշտպանված են"
+msgstr "Բոլոր իրավունքները պաշտպանված են"
+
+msgid "Կայքի Հեղինակ"
+msgstr "Կայքի Հեղինակ"
+
+msgid "Տեսականի"
+msgstr "Տեսականի"
+
+msgid "Մեր Հաճախորդները Մեր Մասին"
+msgstr "Մեր Հաճախորդները Մեր Մասին"
+
+msgid "Թարմացված Մենյու"
+msgstr "Թարմացված Մենյու"
+
+msgid "Ուղարկել Մեզ Նամակ"
+msgstr "Ուղարկել Մեզ Նամակ"
+
+msgid "Անուն"
+msgstr "Անուն"
+
+msgid "Էլ-Փոստ"
+msgstr "Էլ-Փոստ"
+
+msgid "Հեռ․ Համար"
+msgstr "Հեռ․ Համար"
+
+msgid "Նամակ"
+msgstr "Նամակ"
+
+msgid "Շնորհակալություն Նամակի Համար !"
+msgstr "Շնորհակալություն Նամակի Համար !"
+
+msgid "Տեղի է Ունեցել Սխալ !"
+msgstr "Տեղի է Ունեցել Սխալ !"
+
+msgid "Ուղարկել"
+msgstr "Ուղարկել"

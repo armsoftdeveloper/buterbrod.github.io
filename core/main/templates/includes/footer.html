@@ -1,0 +1,79 @@
+{% load static i18n %}
+<!-- Footer Start -->
+<footer class="bg1">
+	<div class="container p-t-40 p-b-70">
+		<div class="d-flex">
+			<div class="container d-flex justify-content-around">
+				<div class="col-sm-6 col-md-6 p-t-50">
+					<h4 class="txt13 m-b-33">
+						{% trans 'Կապ Մեզ Հետ' %}
+					</h4>
+
+					<ul class="m-b-70">
+						<li class="txt14 m-b-14">
+							<i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							{{basicModel.food_zone_address}}
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                            {{basicModel.food_zone_phone}}
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+                            {{basicModel.food_zone_email}}
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-6 col-md-6 p-t-50 res-col">
+					<h4 class="txt13 m-b-32">
+						{% trans 'Աշխատանքային Ժամեր'%}
+					</h4>
+
+					<ul>
+						<li class="txt14">
+							<i class="fa fa-clock-o fs-23 dis-inline-block size19" aria-hidden="true"></i>
+							{{basicModel.food_zone_work_hours_start}} AM - {{basicModel.food_zone_work_hours_end}} PM
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="embed-responsive p-t-50">
+				<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24391.734095357886!2d44.49922035!3d40.16529375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sam!4v1682101116464!5m2!1sru!2sam" width="450" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="end-footer bg2">
+		<div class="container">
+			<div class="flex-sb-m flex-w p-t-22 p-b-22 created-by align-items-center justify-content-around gap-5">
+				<div class="p-t-5 p-b-5 p-r-20">
+					<h1>
+						{{links.food_zone_buy_am}}
+					</h1>
+					<a href="https://www.facebook.com/people/Buterbrod-Food-Zone/100086985244866/?paipv=0&eav=AfYHLXC98fCD9YBBloEuYu6fsCyrjzqPMwYzPbzWPN1YqkmnYIMYpKTbLkh0K3rNo4E&_rdr" class="fs-15 c-white footer-icon" target="_blank"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/buterbrod.food.zone/?fbclid=IwAR1funJ_-OI2mje3tiQ-OLkI2dHcpJ6vwMKWhVHLi0kJhea-Szz4_TNKCYA" class="fs-15 c-white footer-icon" target="_blank"><i class="fa fa-instagram m-l-18" aria-hidden="true" ></i></a>
+					<a href="https://glovoapp.com/am/hy/yerevan/buterbrod-yrv/" class="ml-3" target="_blank"><img src={% static './images/icons/glovo.png' %} alt="Glovo" class="icon-icon-footer"/></a>
+					<a href="https://eats.yandex.com/ru-am/r/buterbrod_moskva?placeSlug=buterbrod_ovkns" class="ml-3" target="_blank"><img src={% static './images/icons/yandex-eats.png' %} alt="Glovo" class="icon-icon-footer"/></a>
+					<a href="https://buy.am/hy/buterbrod-food-zone" class="ml-3" target="_blank"><img src={% static './images/icons/buy-am.png' %} alt="Glovo" class="icon-icon-footer"/></a>
+				</div>
+				<div class="txt17 p-r-20 p-t-5 p-b-5 text-center">
+					Copyright 2023 &copy; 
+					{% trans 'Բոլոր իրավունքները պաշտպանված են' %}
+				</div>
+				<div class="txt17 p-r-20 p-t-5 p-b-5">
+					<a href="#" class="footer-icon" data-toggle="modal" data-target="#termsAndConditions">
+						{% trans 'Ընդհանուր դրույթներր եւ պայմանները'%}
+					</a>
+				</div>
+				<div class="txt17 p-r-20 p-t-5 p-b-5">
+					<a href="https://cyberswave.com/" target="_blank" class="footer-icon">
+						{% trans 'Կայքի Հեղինակ' %}
+						CybersWave
+					<img src="{% static './images/companylogo.png' %}" alt="CybersWave" class="cyberswave"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Footer End -->

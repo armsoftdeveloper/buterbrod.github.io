@@ -1,0 +1,48 @@
+{% load i18n flags %}
+<!-- Header -->
+<header>
+	<div class="wrap-menu-header gradient1 trans-0-4">
+		<div class="container h-full">
+			<div class="wrap_header trans-0-3">
+				<div class="logo">
+					<a href="{% url 'home' %}">
+						<img src="{{basicModel.page_logo.url}}" alt="Logo" data-logofixed="{{basicModel.page_logo.url}}">
+					</a>
+				</div>
+				<!-- Nav Start -->
+				<div class="wrap_menu p-l-45 p-l-0-xl">
+					<nav class="menu">
+						<ul class="main_menu">
+							{% for i in page_static %}
+								<li>
+									<a href="{% url i.url_name %}">
+										{% trans i.title %}
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+				<!-- Nav End -->
+				<!-- Social -->
+				<div class="social flex-w flex-l-m p-r-20">
+					<div class="dropdown">
+						{% get_current_language as LANGUAGE_CODE %}
+						{% get_available_languages as LANGUAGES %}
+						{% get_language_info_list for LANGUAGES as languages %}
+						{% for language in languages %}
+							{% if language.code == LANGUAGE_CODE %}
+								<img src="/static/images/{{ language.code }}.png" height="20px" width="25px">
+							{% endif %}
+						{% endfor %}
+						<div class="dropdown-content">
+							{% languages %}
+						</div>
+					</div>
+					<i class="fa fa-bars btn-show-sidebar" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- End Header -->

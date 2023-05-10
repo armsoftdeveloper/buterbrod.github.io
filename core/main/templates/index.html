@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block 'content' %}
+	<!-- Slider Start -->
+	<section class="section-slide">
+	    <div class="wrap-slick1">
+	        <div class="slick1">
+				{% for i in indexPageSlider %}
+					{% if i.is_published %}
+						<div class="item-slick1 item2-slick1" style="background-image: url({{i.slider_img.url}});">
+							<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+								<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+									<i>{{i.slider_title}}</i>
+								</span>
+								<h2 class="d-flex caption2-slide1 tit1 t-center animated animated-title visible-false m-b-37 responsive-title" data-appear="lightSpeedIn">
+									Buterbrod
+								</h2>
+							</div>
+						</div>
+						{% else %}
+					{% endif %}
+				{% endfor %}
+	        </div>
+	        <div class="wrap-slick1-dots"></div>
+	    </div>
+	</section>
+	<!-- Slider End -->
+
+	<!-- Welcome Start -->
+	<section class="section-welcome bg1-pattern p-t-120 p-b-105">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 p-t-45 p-b-30">
+					<div class="wrap-text-welcome t-center">
+						<span class="tit2 t-center">
+							<i>{% trans about.about_us_title %}</i>
+						</span>
+
+						<h3 class="tit3 t-center m-b-35 m-t-5 responsive-title">
+							Buterbrod
+						</h3>
+
+						<p class="t-center m-b-22 size3 m-l-r-auto">
+							{{ about.about_us_txt }}
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 p-b-30">
+					<div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+						<img src="{{about.about_us_img.url}}" alt="About Us Image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Welcome End -->
+
+	<!-- Intro Start -->
+	<section class="section-intro">
+		<div class="header-intro parallax100 t-center p-t-135 p-b-158 header-intro-custom">
+			<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3 responsive-title">
+				<marquee direction="5">
+					<img src="{{basicModel.page_logo.url}}" alt="Logo" class="marquee-image">	
+						Buterbrod
+					<img src="{{basicModel.page_logo.url}}" alt="Logo" class="marquee-image">	
+				</marquee>
+			</h3>
+		</div>
+	</section>
+	<!-- Intro End -->
+
+	<!-- Our Menu Start -->
+	<section class="section-ourmenu bg2-pattern p-t-115 p-b-120">
+		<div class="container">
+			<div class="title-section-ourmenu t-center m-b-22">
+				<span class="tit2 t-center">
+					<i>{% trans 'Տեսականի' %}</i>
+				</span>
+				<h3 class="tit5 t-center m-t-2 responsive-title">
+					Buterbrod
+				</h3>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						{% for i in indexPageAssortment %}
+							{% if i.is_published %}
+								<div class="col-sm-6">
+									<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+										<img src="{{i.assortment_img.url}}" alt="Menu Img" class="menu-img-h-2">
+										<a href="{% url 'menu' %}" class="btn2 flex-c-m txt5 ab-c-m size7 text-center">
+											{% trans i.assortment_title %}
+										</a>
+									</div>
+								</div>
+								{% else %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Our Menu End -->
+
+	<!-- Review Start -->
+	<section class="section-review p-t-115">
+		<!-- - -->
+		<div class="title-review t-center m-b-2">
+			<span class="tit2 p-l-15 p-r-15">
+				<i>{% trans 'Մեր Հաճախորդները Մեր Մասին' %}</i>
+			</span>
+
+			<h3 class="tit8 t-center p-l-20 p-r-15 p-t-3 responsive-title">
+				Buterbrod
+			</h3>
+		</div>
+		<div class="wrap-slick3">
+			<div class="slick3">
+				{% for i in indexPageReviews %}
+					{% if i.is_published %}
+						<div class="slick3">
+							<div class="item-slick3 item1-slick3">
+								<div class="wrap-content-slide3 p-b-50 p-t-50">
+									<div class="container">
+										<div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
+											<p class="t-center txt12 size15 m-l-r-auto">
+												{{i.review}}
+											</p>
+											<div class="more-review txt4 t-center animated visible-false m-t-32" data-appear="fadeInUp">
+												{{i.customer_info}}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% else %}
+				{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- Review End -->
+
+	<!-- Blog News Start  -->
+	<section class="section-blog bg-white p-t-115 p-b-123">
+		<div class="container">
+			<div class="title-section-ourmenu t-center m-b-22">
+				<span class="tit2 t-center">
+					<i>
+						{% trans 'Թարմացված Մենյու' %}
+					</i>
+				</span>
+
+				<h3 class="tit5 t-center m-t-2 responsive-title">
+					Buterbrod
+				</h3>
+			</div>
+
+			<div class="row">
+				{% for i in indexPageRefreshedMenu %}
+					<div class="col-md-4 p-t-30">
+					<div class="blo1">
+						<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+							<img src="{{i.refreshed_menu_item_image.url}}" alt="News Img" class="menu-news">
+						</div>
+						<div class="wrap-text-blo1 p-t-35">
+							<h4 class="txt5 color0-hov trans-0-4 m-b-13 text-center">
+								{{i.refreshed_menu_item_title}}
+							</h4>
+							<p class="m-b-20 text-center">
+								{{i.refreshed_menu_item_text}}
+							</p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- Blog News End  -->
+{% endblock %}

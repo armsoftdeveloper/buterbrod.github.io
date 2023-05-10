@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-30 02:20+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Գլխավոր"
+msgstr "Home"
+
+msgid "Մենյու"
+msgstr "Menu"
+
+msgid "Մեր Մասին"
+msgstr "About Us"
+
+#: .\main\templates\footer.html:9
+msgid "Կապ Մեզ Հետ"
+msgstr "Contact With Us"
+
+#: .\main\templates\footer.html:31
+msgid "Աշխատանքային Ժամեր"
+msgstr "Work Hours"
+
+#: .\main\templates\footer.html:56
+msgid "Ընդհանուր դրույթներր եւ պայմանները"
+msgstr "General terms and conditions"
+
+#: .\main\templates\footer.html:61
+msgid "Բոլոր իրավունքները պաշտպանված են"
+msgstr "All rights reserved "
+
+#: .\main\templates\footer.html:65
+msgid "Կայքի Հեղինակ"
+msgstr "Created By"
+
+#: .\main\templates\index.html:79
+msgid "Տեսականի"
+msgstr "Assortment"
+
+#: .\main\templates\index.html:113
+msgid "Մեր Հաճախորդները Մեր Մասին"
+msgstr "Our Clients About Us"
+
+#: .\main\templates\index.html:159
+msgid "Թարմացված Մենյու"
+msgstr "Refreshed Menu"
+
+msgid "Ուղարկել Մեզ Նամակ"
+msgstr "Send Us Letter"
+
+msgid "Անուն"
+msgstr "Name"
+
+msgid "Էլ-Փոստ"
+msgstr "Email"
+
+msgid "Հեռ․ Համար"
+msgstr "Phone Number"
+
+msgid "Նամակ"
+msgstr "Letter"
+
+msgid "Շնորհակալություն Նամակի Համար !"
+msgstr "Thank you for the letter!"
+
+msgid "Տեղի է Ունեցել Սխալ !"
+msgstr "An error occurred!"
+
+msgid "Ուղարկել"
+msgstr "Send"

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'menu' %}
+
+<!-- Menu Page End -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({{pagePicture.picture.url}});">
+	<h2 class="tit6 t-center responsive-title">
+		Buterbrod
+	</h2>
+</section>
+<!-- Menu Page End -->
+
+<!-- Inner Menu Start -->
+{% for i in menuCategories %}
+	<section class="section-lunch bgwhite">
+		<div class="section-begin text-center mt-5">
+			<span class="tit2 t-center">
+				<i>{{i.category}}</i>
+			</span>
+		</div>
+		<div class="container-fluid">
+			<div class="row mt-5">
+				<div class="col-md-12 col-lg-12 d-flex flex-wrap align-items-center justify-content-center" style="grid-gap:4%">
+					{% for j in i.cat.all %}
+						{% if j.is_published %}
+						<div class="menu-cols">
+							<div>
+								<img src="{{j.menu_img.url}}" alt="Menu Img" class="menu-img-style" style="border-radius:24px">
+							</div>
+							<div class="text-blo3 size21 flex-col-l-m mt-3" style="text-align:center !important;width:100% !important">
+								<a href="#" class="txt21 m-b-3 text-center" style="text-align: center;width: 100% !important;">
+									{{j.menu_item_name}}
+								</a>
+								<span class="txt23" style="text-align: center;width: 100% !important;">
+									{{j.menu_item_title}}
+								</span>
+								<span class="txt22 m-t-20" style="text-align: center;width: 100% !important;">
+									{{j.menu_item_price}} ֏	
+								</span>
+							</div>
+						</div>
+							{% else %}
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endfor %}
+{% endblock %}
+<!-- Inner Menu End -->

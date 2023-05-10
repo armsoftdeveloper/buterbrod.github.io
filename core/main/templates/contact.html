@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block 'contact' %}
+<!-- Contact Page Start -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({{pagePicture.picture.url}});">
+	<h2 class="tit6 t-center responsive-title">
+		Buterbrod
+	</h2>
+</section>
+<!-- Contact Page End -->
+
+<!-- Contact Form Start -->
+<section class="section-contact bg1-pattern p-t-90 p-b-113">
+	<!-- Map -->
+	<div class="container">
+		<div class="map bo8 bo-rad-10 of-hidden">
+			<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24391.734095357886!2d44.49922035!3d40.16529375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sam!4v1682101116464!5m2!1sru!2sam" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</div>
+	<div class="container">
+		<h3 class="tit7 t-center p-b-62 p-t-105">
+			{% trans 'Ուղարկել Մեզ Նամակ' %}
+		</h3>
+		<form class="wrap-form-reservation size22 m-l-r-auto" id="contact-form">
+				<div class="form-errors"> {{ form.name.errors }} </div>
+				<div class="row">
+					{% csrf_token %}
+					<div class="col-md-4">
+						<span class="txt9">
+						{% trans 'Անուն' %}
+						</span>
+						<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+							{{form.name}}
+						</div>
+					</div>
+					<div class="col-md-4">
+						<span class="txt9">
+							{% trans 'Էլ-Փոստ' %}
+						</span>
+						<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+							{{form.email}}
+						</div>
+					</div>
+					<div class="col-md-4">
+						<span class="txt9">
+							{% trans 'Հեռ․ Համար' %}
+						</span>
+						<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+							{{form.phone}}
+						</div>
+					</div>
+					<div class="col-12">
+						<span class="txt9">
+							{% trans 'Նամակ' %}
+						</span>
+						{{form.txt}}
+					</div>
+					<div class="col-12 d-flex align-items-center justify-content-center">
+						<div class="g-recaptcha" data-sitekey="WORK GREAT BUT I DONT GIVE KEY ANYONE"></div>
+					</div>
+				</div>
+				<div class="alerts mt-2">
+					<div class="alert alert-success text-center" role="alert" id="success" style="display:none !important">
+						<strong>
+							{% trans 'Շնորհակալություն Նամակի Համար !' %}
+						</strong>
+					</div>
+					<div class="alert alert-danger text-center" role="alert" id="error" style="display:none !important">
+						<strong>
+							{% trans 'Տեղի է Ունեցել Սխալ !' %}
+						</strong>
+					</div>
+				</div>
+				<div class="wrap-btn-booking flex-c-m m-t-13">
+					<button type="submit" class="btn3 flex-c-m size36 txt11 trans-0-4">
+						{% trans 'Ուղարկել' %}
+					</button>
+				</div>
+		</form>
+		<div class="row p-t-135">
+			<div class="col-sm-8 col-md-4 col-lg-4 m-l-r-auto p-t-30">
+				<div class="text-center">
+					<div class="mb-3">
+						<i class="fa fa-map-marker fs-23 dis-inline-block size19" aria-hidden="true"></i>
+					</div>
+					<div class="text-center">
+						<span class="txt25 size38">
+							{{basicModel.food_zone_address}}
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8 col-md-3 col-lg-4 m-l-r-auto p-t-30">
+				<div class="text-center">
+					<div class="mb-3">
+						<i class="fa fa-phone fs-23 dis-inline-block size19" aria-hidden="true"></i>
+					</div>
+					<div class="text-center">
+						<span class="txt25 size38">
+							{{basicModel.food_zone_phone}}
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8 col-md-5 col-lg-4 m-l-r-auto p-t-30">
+				<div class="text-center">
+					<div class="mb-3">
+						<i class="fa fa-clock-o fs-23 dis-inline-block size19" aria-hidden="true"></i>
+					</div>
+					<div class="text-center">
+						<span class="txt25 size38">
+							{{basicModel.food_zone_work_hours_start}} AM - {{basicModel.food_zone_work_hours_end}} PM
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+    $("#contact-form").submit(function (e) {
+        e.preventDefault();
+        var serializedData = $(this).serialize();
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'post_message' %}",
+            data: serializedData,
+            success: function (response) {
+				$("#success").show()
+				$("#error").hide()
+                $("#contact-form").trigger('reset');
+            },
+            error: function (response) {
+				$("#success").hide()
+				$("#error").show()
+            }
+        })
+    })
+</script>
+<!-- Contact Form End -->
+{% endblock %}

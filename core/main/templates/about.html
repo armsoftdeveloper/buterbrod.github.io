@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block 'about' %}
+
+<!-- About Page Start -->
+<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({{pagePicture.picture.url}});">
+	<h2 class="tit6 t-center responsive-title">
+		Buterbrod
+	</h2>
+</section>
+<!-- About Page End -->
+
+<!-- Inner Page Start -->
+<section class="bg2-pattern p-t-116 p-b-110 t-center p-l-15 p-r-15">
+	<span class="tit2 t-center">
+		{% trans  about.about_us_title %}
+	</span>
+	<h2 class="tit6 t-center responsive-title">
+		Buterbrod
+	</h2>
+	<p class="t-center size32 m-l-r-auto mt-4">
+		{{ about.about_us_txt }}
+	</p>
+</section>
+<!-- Inner Page End -->
+{% endblock %}
