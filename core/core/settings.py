@@ -10,7 +10,7 @@ from django.shortcuts import HttpResponse
 
 #--------------------------------------------- Secret Key Dont Give Anyone ---------------------------------------------#
 
-SECRET_KEY = 'django-insecure-*=9=uez*kk!n7%h0gfle0p#w(03kdehk%61b@!-lbgsw1m0$g0'
+SECRET_KEY = 'WORK GREAT BUT I DONT GIVE KEY ANYONE'
 
 #--------------------------------------------- Debug For Host/Localhost ---------------------------------------------#
 
